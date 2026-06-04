@@ -23,7 +23,7 @@ their music-theory and signal-analysis logic.
 | **harmonic-lens** | MIDI chord/key detection and next-chord suggestions on a clip. |
 | **groove-transplant** | Extract groove feel from MIDI/audio and apply it; build drum racks from loops. |
 | **beat-detective** | Audio transient detection with a waveform preview. *Analyze-only on SDK 1.0.0 — programmatic warp-marker writing is not yet exposed by the SDK.* |
-| **lidal** | A TidalCycles-flavored live-coding DSL that streams patterns out as MIDI via virtual ports, with a browser-based editor. |
+| **lidal** | A TidalCycles-flavored live-coding DSL that streams patterns out as MIDI via virtual ports, with a browser-based editor. *Fully supported on macOS only — see [Platform support](#platform-support).* |
 | **conway-clips** | Cellular-automata transformations of MIDI clip content. |
 | **petri** | Evolutionary / generative MIDI experiments. |
 
@@ -64,11 +64,39 @@ transient/groove/drum analysis, WAV I/O) used by several of the extensions.
 
 ## Requirements
 
-- A build of **Ableton Live** whose Extension Host negotiates Extensions API `1.0.0`.
-- Node.js + [pnpm](https://pnpm.io).
+- A build of **Ableton Live** whose Extension Host negotiates Extensions API
+  `1.0.0` (e.g. the public beta with Extensions enabled), with **Developer
+  Mode** turned on (Live → Preferences → Extensions) to load locally-built
+  extensions.
+- **Node.js** (LTS) and **[pnpm](https://pnpm.io)** 11+.
 - The **Ableton Extensions SDK** (`@ableton-extensions/sdk`), which is
   proprietary and **not redistributable** — you must obtain it from Ableton and
-  place it in this repo yourself. See **[BUILDING.md](BUILDING.md)**.
+  place it in this repo yourself. This project was developed against SDK
+  `1.0.0-beta.0`. See **[BUILDING.md](BUILDING.md)**.
+
+### Platform support
+
+| Extension | macOS | Windows |
+|-----------|:-----:|:-------:|
+| harmonic-lens, groove-transplant, beat-detective, conway-clips, petri | ✅ | ✅ |
+| lidal | ✅ | ⚠️ unsupported |
+
+Five of the six extensions are pure JavaScript bundles and run anywhere the
+Extension Host does.
+
+**lidal is fully supported on macOS only.** It relies on native modules
+(`easymidi`/RtMidi and `abletonlink`) to create its three **virtual MIDI
+ports**, and the Windows MIDI API does not support creating virtual ports — so
+lidal's core MIDI output path doesn't work there. Packaged builds are
+accordingly produced for macOS only (`darwin-arm64` and `darwin-x64`). On
+Windows you can build lidal, but running it usefully would require a
+third-party virtual-MIDI driver (e.g. loopMIDI) and code changes to open
+existing ports instead of creating them; this is untested and unsupported.
+
+The development workflow (`dev-launch.sh`, see
+[DEVELOPMENT.md](DEVELOPMENT.md)) is also written for macOS — it points at the
+Live application bundle under `/Applications`. Building and deploying the
+pure-JS extensions on Windows works with the standard `pnpm` scripts.
 
 ## Build
 

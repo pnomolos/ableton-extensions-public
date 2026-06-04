@@ -5,6 +5,14 @@ a browser-based editor; they stream out as MIDI to three virtual ports (notes +
 drums + control) that you route to instruments, drum racks, and mapped
 parameters inside Live.
 
+> **Platform support: macOS only.** Lidal creates its virtual MIDI ports via
+> native modules (`easymidi`/RtMidi, `abletonlink`), and the Windows MIDI API
+> does not support creating virtual ports, so packaged builds are produced for
+> macOS only (`darwin-arm64` / `darwin-x64`). On Windows it builds but cannot
+> open its output ports without a third-party virtual-MIDI driver and code
+> changes — untested and unsupported. The other extensions in this repo are
+> pure JS and unaffected.
+
 ## What it does
 
 Lidal turns Live into a live-coding environment. Instead of drawing clips, you
