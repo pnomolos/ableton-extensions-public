@@ -1,0 +1,204 @@
+{
+  "bpm": 93,
+  "durationBeats": 8,
+  "description": "Ghost-note groove, 93 BPM, 2 bars. Main snares on 2+4, ghost snares (25% velocity) on 8th-note offbeats, 16th-note hihats (Cosmic Soul samples)",
+  "events": [
+    {
+      "voice": "kick",
+      "beat": 0
+    },
+    {
+      "voice": "kick",
+      "beat": 2
+    },
+    {
+      "voice": "snare",
+      "beat": 1
+    },
+    {
+      "voice": "snare",
+      "beat": 3
+    },
+    {
+      "voice": "snare",
+      "beat": 0.5
+    },
+    {
+      "voice": "snare",
+      "beat": 1.5
+    },
+    {
+      "voice": "snare",
+      "beat": 2.5
+    },
+    {
+      "voice": "snare",
+      "beat": 3.5
+    },
+    {
+      "voice": "kick",
+      "beat": 4
+    },
+    {
+      "voice": "kick",
+      "beat": 6
+    },
+    {
+      "voice": "snare",
+      "beat": 5
+    },
+    {
+      "voice": "snare",
+      "beat": 7
+    },
+    {
+      "voice": "snare",
+      "beat": 4.5
+    },
+    {
+      "voice": "snare",
+      "beat": 5.5
+    },
+    {
+      "voice": "snare",
+      "beat": 6.5
+    },
+    {
+      "voice": "snare",
+      "beat": 7.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 0
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 1
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 2
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 3
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 4
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 5
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 6
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 7
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.75
+    }
+  ],
+  "samples": {
+    "kick": "/Volumes/Samples/Sample Packs/Cosmic Soul/Cosmic Vintage Drums, Vol. 1 [OPEN SOUL]/One Shots/Kicks/Ample Kick.wav",
+    "snare": "/Volumes/Samples/Sample Packs/Cosmic Soul/Cosmic Vintage Drums, Vol. 1 [OPEN SOUL]/One Shots/Snares/That Snare.wav",
+    "hihat": "/Volumes/Samples/Sample Packs/Cosmic Soul/Cosmic Vintage Drums, Vol. 1 [OPEN SOUL]/One Shots/Hats/Meinl Hats/Meinl Bow Low.wav"
+  }
+}

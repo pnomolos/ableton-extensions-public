@@ -1,0 +1,300 @@
+{
+  "bpm": 110,
+  "durationBeats": 8,
+  "description": "Fast 32nd-note hihat groove, 110 BPM, 2 bars. Standard kick+snare, dense 32nd-note hihats with velocity accents (Cymatics IMMORTAL)",
+  "events": [
+    {
+      "voice": "kick",
+      "beat": 0
+    },
+    {
+      "voice": "kick",
+      "beat": 2
+    },
+    {
+      "voice": "snare",
+      "beat": 1
+    },
+    {
+      "voice": "snare",
+      "beat": 3
+    },
+    {
+      "voice": "kick",
+      "beat": 4
+    },
+    {
+      "voice": "kick",
+      "beat": 6
+    },
+    {
+      "voice": "snare",
+      "beat": 5
+    },
+    {
+      "voice": "snare",
+      "beat": 7
+    },
+    {
+      "voice": "hihat",
+      "beat": 0
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.125
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.375
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.625
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.875
+    },
+    {
+      "voice": "hihat",
+      "beat": 1
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.125
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.375
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.625
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.875
+    },
+    {
+      "voice": "hihat",
+      "beat": 2
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.125
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.375
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.625
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.875
+    },
+    {
+      "voice": "hihat",
+      "beat": 3
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.125
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.375
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.625
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.875
+    },
+    {
+      "voice": "hihat",
+      "beat": 4
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.125
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.375
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.625
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.875
+    },
+    {
+      "voice": "hihat",
+      "beat": 5
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.125
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.375
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.625
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.875
+    },
+    {
+      "voice": "hihat",
+      "beat": 6
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.125
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.375
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.625
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.875
+    },
+    {
+      "voice": "hihat",
+      "beat": 7
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.125
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.375
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.625
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.875
+    }
+  ],
+  "samples": {
+    "kick": "/Volumes/Samples/Cymatics Sample Library/Cymatics - Immortal - Production Suite/Cymatics - IMMORTAL/Drums/Drum One Shots/Kick/Cymatics - Kick (Crushed).wav",
+    "snare": "/Volumes/Samples/Cymatics Sample Library/Cymatics - Immortal - Production Suite/Cymatics - IMMORTAL/Drums/Drum One Shots/Snares/Cymatics - Snare (Bricks).wav",
+    "hihat": "/Volumes/Samples/Cymatics Sample Library/Cymatics - Immortal - Production Suite/Cymatics - IMMORTAL/Drums/Drum One Shots/Hihats - Closed/Cymatics - Hihat (Bamba).wav"
+  }
+}

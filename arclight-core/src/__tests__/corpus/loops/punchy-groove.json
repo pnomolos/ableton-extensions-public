@@ -1,0 +1,108 @@
+{
+  "bpm": 120,
+  "durationBeats": 16,
+  "description": "Punchy 120 BPM groove, kick with pickup 16ths, snare on 2 only, sparse hihats (BWB samples)",
+  "events": [
+    {
+      "voice": "kick",
+      "beat": 0
+    },
+    {
+      "voice": "kick",
+      "beat": 2
+    },
+    {
+      "voice": "kick",
+      "beat": 3.5
+    },
+    {
+      "voice": "kick",
+      "beat": 4
+    },
+    {
+      "voice": "kick",
+      "beat": 6
+    },
+    {
+      "voice": "kick",
+      "beat": 7.5
+    },
+    {
+      "voice": "kick",
+      "beat": 8
+    },
+    {
+      "voice": "kick",
+      "beat": 10
+    },
+    {
+      "voice": "kick",
+      "beat": 11.5
+    },
+    {
+      "voice": "kick",
+      "beat": 12
+    },
+    {
+      "voice": "kick",
+      "beat": 14
+    },
+    {
+      "voice": "kick",
+      "beat": 15.5
+    },
+    {
+      "voice": "snare",
+      "beat": 1
+    },
+    {
+      "voice": "snare",
+      "beat": 5
+    },
+    {
+      "voice": "snare",
+      "beat": 9
+    },
+    {
+      "voice": "snare",
+      "beat": 13
+    },
+    {
+      "voice": "hihat",
+      "beat": 0
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 4
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 8
+    },
+    {
+      "voice": "hihat",
+      "beat": 8.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 12
+    },
+    {
+      "voice": "hihat",
+      "beat": 12.5
+    }
+  ],
+  "samples": {
+    "kick": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 KICKS/BWB SZN 26 KICK (5).wav",
+    "snare": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 SNARES/BWB SZN 26 SNARE (5).wav",
+    "hihat": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 HATS/BWB SZN 26 HI HAT/BWB SZN 26 HI HAT (5).wav"
+  }
+}

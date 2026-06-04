@@ -1,0 +1,332 @@
+{
+  "bpm": 95,
+  "durationBeats": 16,
+  "description": "Hi-hat heavy 4-bar loop, 95 BPM, 16th-note hihats, standard kick+snare (BWB samples)",
+  "events": [
+    {
+      "voice": "kick",
+      "beat": 0
+    },
+    {
+      "voice": "kick",
+      "beat": 2
+    },
+    {
+      "voice": "kick",
+      "beat": 4
+    },
+    {
+      "voice": "kick",
+      "beat": 6
+    },
+    {
+      "voice": "kick",
+      "beat": 8
+    },
+    {
+      "voice": "kick",
+      "beat": 10
+    },
+    {
+      "voice": "kick",
+      "beat": 12
+    },
+    {
+      "voice": "kick",
+      "beat": 14
+    },
+    {
+      "voice": "snare",
+      "beat": 1
+    },
+    {
+      "voice": "snare",
+      "beat": 3
+    },
+    {
+      "voice": "snare",
+      "beat": 5
+    },
+    {
+      "voice": "snare",
+      "beat": 7
+    },
+    {
+      "voice": "snare",
+      "beat": 9
+    },
+    {
+      "voice": "snare",
+      "beat": 11
+    },
+    {
+      "voice": "snare",
+      "beat": 13
+    },
+    {
+      "voice": "snare",
+      "beat": 15
+    },
+    {
+      "voice": "hihat",
+      "beat": 0
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 1
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 2
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 3
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 4
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 5
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 6
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 7
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 8
+    },
+    {
+      "voice": "hihat",
+      "beat": 8.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 8.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 8.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 9
+    },
+    {
+      "voice": "hihat",
+      "beat": 9.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 9.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 9.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 10
+    },
+    {
+      "voice": "hihat",
+      "beat": 10.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 10.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 10.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 11
+    },
+    {
+      "voice": "hihat",
+      "beat": 11.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 11.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 11.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 12
+    },
+    {
+      "voice": "hihat",
+      "beat": 12.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 12.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 12.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 13
+    },
+    {
+      "voice": "hihat",
+      "beat": 13.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 13.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 13.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 14
+    },
+    {
+      "voice": "hihat",
+      "beat": 14.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 14.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 14.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 15
+    },
+    {
+      "voice": "hihat",
+      "beat": 15.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 15.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 15.75
+    }
+  ],
+  "samples": {
+    "kick": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 KICKS/BWB SZN 26 KICK (3).wav",
+    "snare": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 SNARES/BWB SZN 26 SNARE (3).wav",
+    "hihat": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 HATS/BWB SZN 26 HI HAT/BWB SZN 26 HI HAT (8).wav"
+  }
+}

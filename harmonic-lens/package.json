@@ -1,0 +1,24 @@
+{
+  "name": "harmonic-lens",
+  "version": "0.1.0",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "main": "dist/extension.js",
+  "scripts": {
+    "build": "node esbuild.js",
+    "build:prod": "node esbuild.js --production",
+    "dev": "node esbuild.js --watch",
+    "predeploy": "npm run build --workspace=@arclight/core",
+    "deploy": "node esbuild.js && node scripts/deploy.js",
+    "pack": "npm run build --workspace=@arclight/core && node esbuild.js --production && node scripts/pack.js"
+  },
+  "dependencies": {
+    "@ableton-extensions/sdk": "file:../extensions-sdk",
+    "@arclight/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.3.0"
+  }
+}

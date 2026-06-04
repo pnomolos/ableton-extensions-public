@@ -1,0 +1,156 @@
+{
+  "bpm": 140,
+  "durationBeats": 8,
+  "description": "Trap groove, 140 BPM, 2 bars. Sparse kick, snare on 3, accented 16th hihats (Cymatics IMMORTAL)",
+  "events": [
+    {
+      "voice": "kick",
+      "beat": 0
+    },
+    {
+      "voice": "snare",
+      "beat": 2
+    },
+    {
+      "voice": "kick",
+      "beat": 4
+    },
+    {
+      "voice": "snare",
+      "beat": 6
+    },
+    {
+      "voice": "hihat",
+      "beat": 0
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 1
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 2
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 3
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 4
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 5
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 6
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.75
+    },
+    {
+      "voice": "hihat",
+      "beat": 7
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.25
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.75
+    }
+  ],
+  "samples": {
+    "kick": "/Volumes/Samples/Cymatics Sample Library/Cymatics - Immortal - Production Suite/Cymatics - IMMORTAL/Drums/Drum One Shots/Kick/Cymatics - Kick (Aurora).wav",
+    "snare": "/Volumes/Samples/Cymatics Sample Library/Cymatics - Immortal - Production Suite/Cymatics - IMMORTAL/Drums/Drum One Shots/Snares/Cymatics - Snare (Alpha).wav",
+    "hihat": "/Volumes/Samples/Cymatics Sample Library/Cymatics - Immortal - Production Suite/Cymatics - IMMORTAL/Drums/Drum One Shots/Hihats - Closed/Cymatics - Hihat (Aerials).wav"
+  }
+}

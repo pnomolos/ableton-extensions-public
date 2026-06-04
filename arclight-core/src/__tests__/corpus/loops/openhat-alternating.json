@@ -1,0 +1,61 @@
+{
+  "bpm": 120,
+  "durationBeats": 8,
+  "description": "Alternating closed/open hat groove, 120 BPM, 2 bars. Kick on 1, snare on 3, hats alternate closed/open every quarter (BWB samples)",
+  "events": [
+    {
+      "voice": "kick",
+      "beat": 0
+    },
+    {
+      "voice": "snare",
+      "beat": 2
+    },
+    {
+      "voice": "hihat",
+      "beat": 0
+    },
+    {
+      "voice": "openhat",
+      "beat": 1
+    },
+    {
+      "voice": "hihat",
+      "beat": 2
+    },
+    {
+      "voice": "openhat",
+      "beat": 3
+    },
+    {
+      "voice": "kick",
+      "beat": 4
+    },
+    {
+      "voice": "snare",
+      "beat": 6
+    },
+    {
+      "voice": "hihat",
+      "beat": 4
+    },
+    {
+      "voice": "openhat",
+      "beat": 5
+    },
+    {
+      "voice": "hihat",
+      "beat": 6
+    },
+    {
+      "voice": "openhat",
+      "beat": 7
+    }
+  ],
+  "samples": {
+    "kick": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 KICKS/BWB SZN 26 KICK (5).wav",
+    "snare": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 SNARES/BWB SZN 26 SNARE (5).wav",
+    "hihat": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 HATS/BWB SZN 26 HI HAT/BWB SZN 26 HI HAT (5).wav",
+    "openhat": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 HATS/BWB SZN 26 OPEN HAT/BWB SZN 26 OPEN HAT (5).wav"
+  }
+}

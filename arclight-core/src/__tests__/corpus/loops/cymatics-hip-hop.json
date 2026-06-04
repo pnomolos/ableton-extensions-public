@@ -1,0 +1,67 @@
+{
+  "bpm": 90,
+  "durationBeats": 16,
+  "description": "Hip-hop groove, 90 BPM, 4 bars. Syncopated kick pattern, snare on 3 only, no hihat (Cymatics IMMORTAL)",
+  "events": [
+    {
+      "voice": "kick",
+      "beat": 0
+    },
+    {
+      "voice": "kick",
+      "beat": 2.5
+    },
+    {
+      "voice": "snare",
+      "beat": 2
+    },
+    {
+      "voice": "kick",
+      "beat": 4
+    },
+    {
+      "voice": "kick",
+      "beat": 5.5
+    },
+    {
+      "voice": "kick",
+      "beat": 7
+    },
+    {
+      "voice": "snare",
+      "beat": 6
+    },
+    {
+      "voice": "kick",
+      "beat": 8
+    },
+    {
+      "voice": "kick",
+      "beat": 10.5
+    },
+    {
+      "voice": "snare",
+      "beat": 10
+    },
+    {
+      "voice": "kick",
+      "beat": 12
+    },
+    {
+      "voice": "kick",
+      "beat": 13.5
+    },
+    {
+      "voice": "kick",
+      "beat": 15
+    },
+    {
+      "voice": "snare",
+      "beat": 14
+    }
+  ],
+  "samples": {
+    "kick": "/Volumes/Samples/Cymatics Sample Library/Cymatics - Immortal - Production Suite/Cymatics - IMMORTAL/Drums/Drum One Shots/Kick/Cymatics - Kick (BigBoi).wav",
+    "snare": "/Volumes/Samples/Cymatics Sample Library/Cymatics - Immortal - Production Suite/Cymatics - IMMORTAL/Drums/Drum One Shots/Snares/Cymatics - Snare (Bully).wav"
+  }
+}

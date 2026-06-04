@@ -1,0 +1,101 @@
+{
+  "bpm": 100,
+  "durationBeats": 8,
+  "description": "Openhat rock/funk groove, 100 BPM, 2 bars. Kick on 1, snare 2+4, closed 8th hats with open hat on beat 3 (BWB samples)",
+  "events": [
+    {
+      "voice": "kick",
+      "beat": 0
+    },
+    {
+      "voice": "snare",
+      "beat": 1
+    },
+    {
+      "voice": "snare",
+      "beat": 3
+    },
+    {
+      "voice": "kick",
+      "beat": 4
+    },
+    {
+      "voice": "snare",
+      "beat": 5
+    },
+    {
+      "voice": "snare",
+      "beat": 7
+    },
+    {
+      "voice": "hihat",
+      "beat": 0
+    },
+    {
+      "voice": "hihat",
+      "beat": 0.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 1
+    },
+    {
+      "voice": "hihat",
+      "beat": 1.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 2.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 3
+    },
+    {
+      "voice": "hihat",
+      "beat": 3.5
+    },
+    {
+      "voice": "openhat",
+      "beat": 2
+    },
+    {
+      "voice": "hihat",
+      "beat": 4
+    },
+    {
+      "voice": "hihat",
+      "beat": 4.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 5
+    },
+    {
+      "voice": "hihat",
+      "beat": 5.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 6.5
+    },
+    {
+      "voice": "hihat",
+      "beat": 7
+    },
+    {
+      "voice": "hihat",
+      "beat": 7.5
+    },
+    {
+      "voice": "openhat",
+      "beat": 6
+    }
+  ],
+  "samples": {
+    "kick": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 KICKS/BWB SZN 26 KICK (1).wav",
+    "snare": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 SNARES/BWB SZN 26 SNARE (1).wav",
+    "hihat": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 HATS/BWB SZN 26 HI HAT/BWB SZN 26 HI HAT (1).wav",
+    "openhat": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 HATS/BWB SZN 26 OPEN HAT/BWB SZN 26 OPEN HAT (1).wav"
+  }
+}

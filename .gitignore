@@ -1,0 +1,16 @@
+node_modules/
+dist/
+# The Ableton Extensions SDK is proprietary and NON-redistributable. Obtain it
+# from Ableton and place it at extensions-sdk/ (see BUILDING.md). Never commit it
+# — no exceptions, no dist/ negation.
+extensions-sdk/
+*.js.map
+*.tsbuildinfo
+.DS_Store
+**/.DS_Store
+**/releases/
+*.log
+.vscode/
+coverage/
+# Claude Code / local agent state
+.claude/

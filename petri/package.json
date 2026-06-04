@@ -1,0 +1,22 @@
+{
+  "name": "petri",
+  "version": "0.1.0",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "main": "dist/extension.js",
+  "scripts": {
+    "build": "node esbuild.js",
+    "build:prod": "node esbuild.js --production",
+    "dev": "node esbuild.js --watch",
+    "deploy": "node esbuild.js && cp dist/extension.js \"$HOME/Music/Ableton Alpha/User Library/Extensions/petri/dist/extension.js\""
+  },
+  "dependencies": {
+    "@ableton-extensions/sdk": "file:../extensions-sdk",
+    "@arclight/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.3.0"
+  }
+}

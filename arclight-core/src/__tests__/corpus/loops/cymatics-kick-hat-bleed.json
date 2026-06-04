@@ -1,0 +1,60 @@
+{
+  "bpm": 100,
+  "durationBeats": 8,
+  "description": "Kick+hihat bleed test, 100 BPM, 2 bars. Hat fires on every kick downbeat — tests kick-under-hat classifier (Cymatics IMMORTAL)",
+  "events": [
+    {
+      "voice": "kick",
+      "beat": 0
+    },
+    {
+      "voice": "kick",
+      "beat": 2
+    },
+    {
+      "voice": "hihat",
+      "beat": 0
+    },
+    {
+      "voice": "hihat",
+      "beat": 2
+    },
+    {
+      "voice": "snare",
+      "beat": 1
+    },
+    {
+      "voice": "snare",
+      "beat": 3
+    },
+    {
+      "voice": "kick",
+      "beat": 4
+    },
+    {
+      "voice": "kick",
+      "beat": 6
+    },
+    {
+      "voice": "hihat",
+      "beat": 4
+    },
+    {
+      "voice": "hihat",
+      "beat": 6
+    },
+    {
+      "voice": "snare",
+      "beat": 5
+    },
+    {
+      "voice": "snare",
+      "beat": 7
+    }
+  ],
+  "samples": {
+    "kick": "/Volumes/Samples/Cymatics Sample Library/Cymatics - Immortal - Production Suite/Cymatics - IMMORTAL/Drums/Drum One Shots/Kick/Cymatics - Kick (Bombastic).wav",
+    "hihat": "/Volumes/Samples/Cymatics Sample Library/Cymatics - Immortal - Production Suite/Cymatics - IMMORTAL/Drums/Drum One Shots/Hihats - Closed/Cymatics - Hihat (Champion).wav",
+    "snare": "/Volumes/Samples/Cymatics Sample Library/Cymatics - Immortal - Production Suite/Cymatics - IMMORTAL/Drums/Drum One Shots/Snares/Cymatics - Snare (Chonk).wav"
+  }
+}

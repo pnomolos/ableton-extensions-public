@@ -1,0 +1,27 @@
+{
+  "bpm": 90,
+  "durationBeats": 8,
+  "description": "Sparse 2-bar groove, 90 BPM, kick on 1 only, snare on 3 only, no hihat (BWB samples)",
+  "events": [
+    {
+      "voice": "kick",
+      "beat": 0
+    },
+    {
+      "voice": "snare",
+      "beat": 2
+    },
+    {
+      "voice": "kick",
+      "beat": 4
+    },
+    {
+      "voice": "snare",
+      "beat": 6
+    }
+  ],
+  "samples": {
+    "kick": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 KICKS/BWB SZN 26 KICK (10).wav",
+    "snare": "/Users/you/Music/Local Samples/BWB SZN 26/BWB SZN 26 SNARES/BWB SZN 26 SNARE (10).wav"
+  }
+}

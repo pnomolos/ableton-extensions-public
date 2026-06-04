@@ -1,0 +1,32 @@
+packages:
+  - arclight-core
+  - harmonic-lens
+  - beat-detective
+  - groove-transplant
+  - conway-clips
+  - petri
+  - lidal
+
+allowBuilds:
+  '@julusian/midi': true
+  abletonlink: true
+  esbuild: true
+
+# Allowlist of packages whose install scripts may run during `pnpm install`.
+# pnpm 11 blocks postinstall hooks by default; native deps for lidal need
+# node-gyp / pkg-prebuilds. CI uses `--ignore-scripts` (native deps are
+# externalised by esbuild and stubbed in tests), so this matters mainly
+# for local pack runs.
+onlyBuiltDependencies:
+  - abletonlink
+  - easymidi
+  - "@julusian/midi"
+  - esbuild
+  - fsevents
+
+# Force-bump transitive deps with security advisories. postcss < 8.5.10 has
+# GHSA-qx2v-qp2m-jg93 (XSS via unescaped </style> in stringify). Pulled in
+# only by vitest → vite (devDep, never reaches the shipped bundle), but
+# patched anyway since 8.5.10 is a drop-in.
+overrides:
+  postcss@<8.5.10: ^8.5.10
