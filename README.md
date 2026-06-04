@@ -1,5 +1,7 @@
 # Arclight Extensions
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+
 A monorepo of community-built extensions for **Ableton Live**, targeting the
 Extensions SDK (API `1.0.0`).
 
