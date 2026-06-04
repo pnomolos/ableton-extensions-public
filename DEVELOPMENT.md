@@ -21,12 +21,18 @@ you run the host yourself (next step) so you can reload extensions on demand.
 `dev-launch.sh` manually runs Live's **Extension Host** as a child process. On
 startup it:
 
-- **Auto-discovers extensions.** It scans every subdirectory of your User
-  Library Extensions folder
-  (`~/Music/Ableton Alpha/User Library/Extensions` by default) and registers
-  any subdirectory that contains a `manifest.json`. Deploy a new extension and
-  it gets picked up on the next (re)start of the host — no need to edit the
-  script.
+- **Discovers your Live install.** It scans `/Applications/Ableton Live*.app`
+  for installs that contain an Extension Host (checking both known bundle
+  layouts — see [Path / install notes](#path--install-notes)). If several
+  match, it asks which to use; set `ABLETON_APP` to skip the prompt.
+- **Discovers your User Library.** Likewise, if several
+  `~/Music/Ableton*/User Library` folders exist (release/Beta/Alpha editions
+  each get their own), it asks which to use; set `ABLETON_USER_LIBRARY` to
+  skip the prompt.
+- **Auto-discovers extensions.** It scans every subdirectory of the chosen
+  User Library's `Extensions/` folder and registers any subdirectory that
+  contains a `manifest.json`. Deploy a new extension and it gets picked up on
+  the next (re)start of the host — no need to edit the script.
 - **Prints its own PID.** You'll see a line like:
 
   ```
@@ -63,7 +69,7 @@ kill -HUP <dev-launch-pid>
 ## ⚠️ Caveat 1 — `SIGHUP` does NOT build or deploy
 
 The Extension Host loads the **deployed** bundle from your User Library
-(`~/Music/Ableton Alpha/User Library/Extensions/<ext>/...`), **not** the source
+(`~/Music/Ableton*/User Library/Extensions/<ext>/...`), **not** the source
 or `dist/` in this repo. Sending `SIGHUP` only restarts the host against
 whatever is already deployed — it runs no build step.
 
@@ -96,21 +102,39 @@ restart Live.
 
 ## Path / install notes
 
-`dev-launch.sh` hardcodes paths near the top that you may need to edit for your
-setup:
+`dev-launch.sh` discovers everything and **asks** when there's more than one
+candidate — nothing in the script needs editing:
 
-- `EH_MOD` — path to `ExtensionHostNodeModule.node` inside your `Live.app`.
-- `EH_NODE` — path to Live's **bundled** `node` binary. The script uses Live's
-  bundled node so the native ABI matches what production extensions ship
-  against. It falls back to the `node` on your `PATH` if the bundled binary is
-  missing.
-- `EH_EXTENSIONS_DIR` — the User Library Extensions folder it scans
-  (`~/Music/Ableton Alpha/User Library/Extensions`).
+- **Live install** — every `/Applications/Ableton Live*.app` containing an
+  Extension Host is a candidate. The host has moved inside the bundle between
+  releases (`Contents/App-Resources/Extensions/ExtensionHost/` up to the 12.4
+  alphas, `Contents/Helpers/ExtensionHost/` from the 12.4.5 betas on); both
+  layouts are checked.
+- **User Library** — every `~/Music/Ableton*/User Library` is a candidate
+  (each Live edition — release/Beta/Alpha — can have its own), annotated with
+  how many extensions are deployed in it. Picking one without an `Extensions/`
+  folder is fine — deploy creates it.
+- **Node binary** — Live's **bundled** `node` next to the host module, so the
+  native ABI matches what production extensions ship against; falls back to
+  the `node` on your `PATH`.
 
-These default to an **Ableton Alpha** install of a specific Live version
-(`Ableton Live 12.4 Alpha.app`). If you're on a different Live version or
-edition, edit `EH_MOD`, `EH_NODE`, and `EH_EXTENSIONS_DIR` to match your install
-before running the script.
+Prompts are skipped when only one candidate exists, when the matching env var
+is set, or when there's no TTY (the most recently modified candidate wins).
+Set the env vars in your shell profile to pin a setup and never be asked:
+
+```bash
+export ABLETON_APP="/Applications/Ableton Live 12 Beta.app"
+export ABLETON_USER_LIBRARY="$HOME/Music/Ableton/User Library"
+```
+
+`scripts/deploy-extension.js` honours the same `ABLETON_USER_LIBRARY`
+variable (it stays non-interactive so `pnpm run deploy:all` can batch), so
+deploy and dev-launch always target the same Extensions folder.
+
+Low-level overrides that bypass discovery entirely: `ABLETON_EH_MOD` (path to
+`ExtensionHostNodeModule.node`), `ABLETON_EH_NODE` (host node binary),
+`ABLETON_EXTENSIONS_DIR` (Extensions folder to scan), `ABLETON_STORAGE_BASE`
+(per-extension storage root).
 
 ## lidal: MIDI routing
 

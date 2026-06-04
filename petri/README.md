@@ -44,7 +44,7 @@ cd petri
 pnpm run deploy
 ```
 
-`deploy` builds and copies `dist/extension.js` into `~/Music/Ableton Alpha/User Library/Extensions/petri/dist/`. The deployed folder must also contain `manifest.json`. See [../BUILDING.md](../BUILDING.md) for full build details.
+`deploy` builds and copies `manifest.json` and `dist/extension.js` into `<User Library>/Extensions/petri/` (set `ABLETON_USER_LIBRARY` to pin which Live User Library; otherwise it is auto-discovered). See [../BUILDING.md](../BUILDING.md) for full build details.
 
 ## Development
 

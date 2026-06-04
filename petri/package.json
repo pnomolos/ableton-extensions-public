@@ -8,7 +8,7 @@
     "build": "node esbuild.js",
     "build:prod": "node esbuild.js --production",
     "dev": "node esbuild.js --watch",
-    "deploy": "node esbuild.js && cp dist/extension.js \"$HOME/Music/Ableton Alpha/User Library/Extensions/petri/dist/extension.js\""
+    "deploy": "node esbuild.js && node scripts/deploy.js"
   },
   "dependencies": {
     "@ableton-extensions/sdk": "file:../extensions-sdk",

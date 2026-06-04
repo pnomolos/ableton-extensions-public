@@ -6,7 +6,11 @@
  *   require("../../scripts/deploy-extension.js")(__dirname)
  *
  * Copies manifest.json and dist/extension.js to:
- *   ~/Music/Ableton Alpha/User Library/Extensions/<slug>/
+ *   <User Library>/Extensions/<slug>/
+ *
+ * The User Library is resolved by resolveUserLibrary() below — set
+ * $ABLETON_USER_LIBRARY to pin it (same env var dev-launch.sh uses, so
+ * deploy and launch always agree on the Extensions folder).
  *
  * Creates the target directory if it does not exist.
  */
@@ -72,10 +76,38 @@ function copyDirRecursive(src, dst) {
   }
 }
 
+// Resolve the Live User Library to deploy into. Priority:
+//   1. $ABLETON_USER_LIBRARY (path to the "User Library" folder)
+//   2. the ~/Music/Ableton*/User Library whose Extensions/ folder was most
+//      recently modified (mirrors dev-launch.sh's discovery — each Live
+//      edition (release/Beta/Alpha) can have its own User Library)
+//   3. ~/Music/Ableton/User Library (Live's default), created on deploy
+function resolveUserLibrary() {
+  if (process.env.ABLETON_USER_LIBRARY) return process.env.ABLETON_USER_LIBRARY;
+  const music = path.join(os.homedir(), "Music");
+  let candidates = [];
+  try {
+    candidates = fs.readdirSync(music)
+      .filter((name) => name.startsWith("Ableton"))
+      .map((name) => path.join(music, name, "User Library"))
+      .filter((lib) => fs.existsSync(path.join(lib, "Extensions")));
+  } catch { /* ~/Music missing — fall through to the default */ }
+  if (candidates.length) {
+    candidates.sort((a, b) =>
+      fs.statSync(path.join(b, "Extensions")).mtimeMs -
+      fs.statSync(path.join(a, "Extensions")).mtimeMs);
+    if (candidates.length > 1) {
+      console.log(`  (multiple User Libraries found — using "${candidates[0]}"; set ABLETON_USER_LIBRARY to override)`);
+    }
+    return candidates[0];
+  }
+  return path.join(music, "Ableton", "User Library");
+}
+
 module.exports = function deployExtension(callerScriptsDir) {
   const ROOT   = path.resolve(callerScriptsDir, "..");
   const slug   = path.basename(ROOT);
-  const dest   = path.join(os.homedir(), "Music", "Ableton Alpha", "User Library", "Extensions", slug);
+  const dest   = path.join(resolveUserLibrary(), "Extensions", slug);
   const destDist = path.join(dest, "dist");
 
   fs.mkdirSync(destDist, { recursive: true });
@@ -99,3 +131,7 @@ module.exports = function deployExtension(callerScriptsDir) {
 
   console.log(`✓ Deployed ${slug} → ${dest}`);
 };
+
+// Exported so per-extension deploy scripts with extra artifacts (e.g. lidal's
+// editor-client.js) target the same User Library as the shared helper.
+module.exports.resolveUserLibrary = resolveUserLibrary;

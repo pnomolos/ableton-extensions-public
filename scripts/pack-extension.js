@@ -24,7 +24,7 @@
  * of that OS — this helper will error if asked.
  *
  * Testers install by unzipping into:
- *   ~/Music/Ableton Alpha/User Library/Extensions/<slug>/
+ *   <User Library>/Extensions/<slug>/
  * then reloading the Extension Host (kill -HUP <pid>).
  */
 
@@ -258,7 +258,7 @@ module.exports = function packExtension(callerScriptsDir) {
     console.log(`  ${zipPath}`);
     console.log(`
 Install instructions for testers:
-  1. Unzip into ~/Music/Ableton\\ Alpha/User\\ Library/Extensions/
+  1. Unzip into your Live "User Library/Extensions/" folder
      so the result is: Extensions/${slug}/{manifest.json,dist/extension.js}
   2. Reload Extension Host: kill -HUP <pid>  (pid shown on startup)
   3. The "${displayName}" extension should appear in Live's Extensions menu.
@@ -284,7 +284,7 @@ Install instructions for testers:
   console.log(`
 Install instructions for testers:
   1. Pick the zip matching your platform-arch.
-  2. Unzip into ~/Music/Ableton\\ Alpha/User\\ Library/Extensions/
+  2. Unzip into your Live "User Library/Extensions/" folder
      so the result is: Extensions/${slug}/{manifest.json,dist/extension.js,node_modules/}
   3. Reload Extension Host: kill -HUP <pid>  (pid shown on startup)
   4. The "${displayName}" extension should appear in Live's Extensions menu.

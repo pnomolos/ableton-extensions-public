@@ -2,10 +2,14 @@ import { existsSync } from "fs";
 import { homedir } from "os";
 import { join } from "path";
 
-// Prefer the Alpha User Library when present; fall back to the standard library.
-// Both paths must be checked at runtime since the Alpha library may not exist on
-// a tester's machine or if Live is reinstalled without Alpha.
+// Resolve the User Library at runtime: $ABLETON_USER_LIBRARY when set (the same
+// variable dev-launch.sh and the deploy scripts honour), then the Alpha library
+// when present, then the standard library. The fallbacks must be checked at
+// runtime since the Alpha library may not exist on a tester's machine or if
+// Live is reinstalled without Alpha.
 function userLibraryBase(): string {
+  const fromEnv = process.env.ABLETON_USER_LIBRARY;
+  if (fromEnv && existsSync(fromEnv)) return fromEnv;
   const alpha    = join(homedir(), "Music", "Ableton Alpha", "User Library");
   const standard = join(homedir(), "Music", "Ableton", "User Library");
   return existsSync(alpha) ? alpha : standard;
