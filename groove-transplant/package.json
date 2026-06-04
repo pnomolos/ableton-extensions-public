@@ -8,9 +8,9 @@
     "build": "node esbuild.js",
     "build:prod": "node esbuild.js --production",
     "dev": "node esbuild.js --watch",
-    "predeploy": "npm run build --workspace=@arclight/core",
+    "predeploy": "pnpm --filter @arclight/core build",
     "deploy": "node esbuild.js && node scripts/deploy.js",
-    "pack": "npm run build --workspace=@arclight/core && node esbuild.js --production && node scripts/pack.js",
+    "pack": "pnpm --filter @arclight/core build && node esbuild.js --production && node scripts/pack.js",
     "test": "vitest run"
   },
   "dependencies": {
