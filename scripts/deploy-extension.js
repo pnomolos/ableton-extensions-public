@@ -60,6 +60,35 @@ function collectDepTree(pkgName, fromDir, collected = new Map(), seen = new Set(
   return collected;
 }
 
+// True if any .node binary exists under dir (build output or shipped prebuilds).
+function hasNativeBinary(dir) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, entry.name);
+    if (entry.isFile() && entry.name.endsWith(".node")) return true;
+    if (entry.isDirectory() && entry.name !== "node_modules" && hasNativeBinary(p)) return true;
+  }
+  return false;
+}
+
+// Gyp-built packages (e.g. abletonlink) only have their .node binary if their
+// install script actually ran — pnpm 11 blocks build scripts unless approved,
+// so a fresh install can silently leave them uncompiled. Shipping them anyway
+// would deploy a runtime-degraded extension; fail loudly instead.
+function assertNativeBinariesPresent(collected) {
+  for (const [name, dir] of collected) {
+    let gypfile = false;
+    try { gypfile = JSON.parse(fs.readFileSync(path.join(dir, "package.json"), "utf8")).gypfile === true; } catch {}
+    if (!gypfile && !fs.existsSync(path.join(dir, "binding.gyp"))) continue;
+    if (!hasNativeBinary(dir)) {
+      throw new Error(
+        `native dep '${name}' has no compiled .node binary (its build script ` +
+        `did not run — pnpm blocks install scripts unless approved). ` +
+        `Run: pnpm rebuild ${name}   (or pnpm approve-builds)`,
+      );
+    }
+  }
+}
+
 function copyDirRecursive(src, dst) {
   fs.mkdirSync(dst, { recursive: true });
   for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
@@ -121,6 +150,7 @@ module.exports = function deployExtension(callerScriptsDir) {
   if (nativeDeps.length) {
     const collected = new Map();
     for (const dep of nativeDeps) collectDepTree(dep, ROOT, collected);
+    assertNativeBinariesPresent(collected);
     const destNm = path.join(dest, "node_modules");
     fs.rmSync(destNm, { recursive: true, force: true });
     for (const [name, dir] of collected) {

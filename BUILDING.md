@@ -53,6 +53,19 @@ them, but if you see `ERR_PNPM_IGNORED_BUILDS`, run `pnpm approve-builds`.
 (Extension bundles externalize native deps, so they build even if the native
 binaries are not compiled — but you need them compiled to *run* `lidal`.)
 
+`easymidi`'s backend (`@julusian/midi`) ships prebuilt binaries, but
+`abletonlink` must be compiled by node-gyp at install time. If that step was
+skipped (blocked install scripts, `--ignore-scripts`), `lidal`'s deploy and
+pack fail with a "no compiled .node binary" error rather than shipping a
+bundle with Ableton Link silently disabled — fix it with:
+
+```bash
+pnpm rebuild abletonlink
+```
+
+(`abletonlink` is N-API-based, so the compiled binary is ABI-stable across
+Node versions — your local Node need not match Live's bundled one.)
+
 ## 3. Deploy to Live
 
 Each extension has a `deploy` script that copies its built bundle into your

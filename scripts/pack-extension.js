@@ -90,6 +90,16 @@ function copyDirRecursive(src, dst) {
   }
 }
 
+// True if any .node binary exists under dir (build output or shipped prebuilds).
+function hasNativeBinary(dir) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, entry.name);
+    if (entry.isFile() && entry.name.endsWith(".node")) return true;
+    if (entry.isDirectory() && entry.name !== "node_modules" && hasNativeBinary(p)) return true;
+  }
+  return false;
+}
+
 // Recompile a node-gyp-driven native module in place for a target arch.
 // Requires `binding.gyp` at the module root. On macOS, --target_arch=x64|arm64
 // instructs gyp to set ARCHS in the Xcode build, producing a Mach-O for the
@@ -168,6 +178,13 @@ function buildOneTarget({ target, ROOT, MANIFEST, BUNDLE, nativeDeps, slug, vers
       if (hasGyp && !hasPrebuilds && !isHost) {
         console.log(`  cross-compiling ${name} for ${target.platform}-${target.arch}…`);
         crossCompileNativeModule(dst, target, hostPlatform);
+      } else if (hasGyp && !hasPrebuilds && !hasNativeBinary(dst)) {
+        // Gyp-built module never compiled (pnpm blocks install scripts unless
+        // approved) — shipping it would degrade the extension at runtime.
+        throw new Error(
+          `native dep '${name}' has no compiled .node binary. ` +
+          `Run: pnpm rebuild ${name}   (or pnpm approve-builds)`,
+        );
       }
     }
     const depSummary = [...collected.keys()].sort().join(", ");
